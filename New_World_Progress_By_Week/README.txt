@@ -1,5 +1,5 @@
-The purpose of this app is to prevent fake news and spread facts around the world. The main problem would be eliminating fake news that are currently spreading around the globe. B
-y using our app NewsWorld, the users can rely on us for trustworth news and do not have to worry about reading fake news.
+The purpose of this app is to prevent fake news and spread facts around the world. The main problem would be eliminating fake news that are currently spreading around the globe. 
+By using our app NewsWorld, the users can rely on us for trustworth news and do not have to worry about reading fake news.
 
 
 _Since we are developing an app that was created in the last semester, we will use the design that we created last year, and we did add some design for chat features this semester as well. We used Figma to design the user interface.
