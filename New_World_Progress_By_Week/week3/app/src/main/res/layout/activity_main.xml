@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shade_1"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/idToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titleName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="NEWS WORLD"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="19dp"></TextView>
+
+            <ImageView
+                    android:id="@+id/optionIcon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    app:srcCompat="@drawable/ic_option_icon"
+                    android:layout_alignLeft="@+id/titleName"/>
+
+            <ImageView
+                android:id="@+id/searchIcon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_search_v2"
+                android:layout_alignRight="@+id/titleName"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idToolbar"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/categoriy_item_rv">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <View
+            android:id="@+id/viewLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/yellow"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="1dp"
+            android:layout_below="@id/idRVCategories"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVNews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/viewLine"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/news_item_rv" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/idPBLoading"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>
