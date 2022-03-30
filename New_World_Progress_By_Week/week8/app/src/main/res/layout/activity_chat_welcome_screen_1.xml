@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shade_1"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:paddingTop="60dp"
+        android:text="Welcome to"
+        android:textColor="@color/yellow"
+        android:textSize="25sp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:paddingLeft="22dp"
+        android:paddingTop="10dp"
+        android:text="News World Connect"
+        android:textColor="@color/yellow"
+        android:textSize="45sp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sub_title"
+        android:layout_marginLeft="22dp"
+        android:paddingTop="50dp"
+        android:text="Set Up Your Account To Stay Connected"
+
+        android:textColor="@color/yellow"
+        android:textSize="21sp"></TextView>
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/countrycodepicker"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/details"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="20dp"
+        android:outlineSpotShadowColor="@color/yellow"
+        app:ccp_areaCodeDetectedCountry="true"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_contentColor="@color/yellow"
+        app:ccp_textSize="21sp"></com.hbb20.CountryCodePicker>
+
+    <EditText
+        android:id="@+id/getphonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/countrycodepicker"
+        android:layout_marginTop="4dp"
+        android:background="@color/yellow"
+        android:hint="Enter Your Number Here"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/black_shade_1"
+        android:textColorHint="@color/black_shade_1"></EditText>
+
+    <android.widget.Button
+        android:id="@+id/sendotpbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/getphonenumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="#25d366"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="Summit"
+        android:textColor="#5D4037"
+        android:textSize="15sp" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/sendotpbutton"
+        android:visibility="invisible"
+        android:id="@+id/progressbarofmain"
+        android:layout_marginTop="30dp"></ProgressBar>
+
+</RelativeLayout>
