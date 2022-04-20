@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shade_1"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sub_title"
+        android:text="News World Connect"
+        android:textSize="45sp"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="22dp"
+        android:paddingBottom="50dp"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/textheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sub_title"
+        android:padding="30dp"
+        android:text="Enter Codes Which You Received"
+        android:textAlignment="center"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        android:textStyle="italic"></TextView>
+
+    <EditText
+        android:id="@+id/getotp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/textheading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
+        android:background="@color/grey"
+        android:hint="Enter the OTP here"
+        android:textColorHint="@color/white"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/changenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/getotp"
+        android:layout_centerHorizontal="true"
+        android:text="Didn't Receive? Change Your Number"
+        android:paddingTop="5dp"
+        android:textColor="@color/yellow"
+        android:textSize="18sp"
+        android:textStyle="italic"/>
+
+    <android.widget.Button
+        android:id="@+id/verifyotp"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/changenumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="#25d366"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="Verify Code"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck" />
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/verifyotp"
+        android:visibility="invisible"
+        android:id="@+id/progressbarOfotpAuth"
+        android:layout_marginTop="30dp"
+        android:outlineSpotShadowColor="@color/yellow"
+        android:outlineAmbientShadowColor="@color/yellow"
+        ></ProgressBar>
+
+
+</RelativeLayout>
