@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chat_chatActivity_4_chatActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="0dp"
+        android:background="@color/black_shade_1"
+        android:id="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/backButtonOfChatScreen"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_back_icon" />
+
+            <TextView
+                android:id="@+id/myapptext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/backButtonOfChatScreen"
+                android:text="NewsWorld Connect"
+                android:textColor="@color/yellow"
+                android:textSize="24sp"
+                android:fontFamily="@font/ubunto_title"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@id/toolbar"
+        android:background="@color/black_shade_1"
+
+
+        app:tabIndicatorColor="@color/black_shade_1"
+        app:tabSelectedTextColor="@color/yellow"
+        app:tabTextColor="@color/yellow">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tab_layout"
+        android:id="@+id/lineBelowTablayOut"
+        android:background="@color/yellow">
+
+    </RelativeLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lineBelowTablayOut"
+        android:layout_marginTop="0.1dp"
+        android:background="@color/black_shade_1">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+</RelativeLayout>
